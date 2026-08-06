@@ -13,7 +13,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(''),
+  // metadataBase removed: supplying an empty string to new URL('') throws during build.
+  // If you need a base URL in production, set NEXT_PUBLIC_SITE_URL and uncomment the line below.
+  // metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
   title: {
     default: 'Action Propane Inc | Propane Delivery & Refill in Leander & Austin TX',
     template: '%s | Action Propane Inc',
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: '' },
+  alternates: { canonical: '/' },
 }
 
 export const viewport: Viewport = {
