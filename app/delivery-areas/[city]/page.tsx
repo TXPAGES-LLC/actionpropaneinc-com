@@ -56,7 +56,7 @@ const cityDetails: Record<
   georgetown: {
     region: 'Williamson County',
     description:
-      'Georgetown's fast-growing residential base means more Central Texas homeowners are choosing propane for heating, cooking, and standby power. Action Propane serves Georgetown with reliable scheduled delivery.',
+      "Georgetown's fast-growing residential base means more Central Texas homeowners are choosing propane for heating, cooking, and standby power. Action Propane serves Georgetown with reliable scheduled delivery.",
     services: ['Residential propane delivery', 'Commercial propane delivery'],
   },
   'round-rock': {
