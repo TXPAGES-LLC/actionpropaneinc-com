@@ -140,7 +140,7 @@ const cityDetails: Record<
   driftwood: {
     region: 'Hays County',
     description:
-      'Driftwood's scenic ranch properties and rural homesteads are a natural fit for propane. Action Propane delivers to the Driftwood area and can supply propane for home heating, cooking, pool heaters, and agricultural use.',
+      "Driftwood's scenic ranch properties and rural homesteads are a natural fit for propane. Action Propane delivers to the Driftwood area and can supply propane for home heating, cooking, pool heaters, and agricultural use.",
     services: ['Residential propane delivery', 'Propane tank installation', 'Agricultural propane service'],
   },
   'hamilton-pool': {
