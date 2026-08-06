@@ -1,0 +1,13 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Action Propane Inc favicon: "A" lettermark on brand red -->
+  <rect width="180" height="180" rx="36" fill="#dc2626"/>
+  <!-- Letter A: two diagonal strokes + crossbar -->
+  <path
+    d="M90 36 L130 144 H116 L105 114 H75 L64 144 H50 L90 36Z"
+    fill="white"
+  />
+  <path
+    d="M79 100 L90 68 L101 100Z"
+    fill="#dc2626"
+  />
+</svg>
