@@ -23,6 +23,8 @@ export default async function OgImage() {
         <img
           src="https://actionpropaneinc.com/front-of-building.jpg"
           alt=""
+          width={780}
+          height={630}
           style={{
             position: 'absolute',
             top: 0,
