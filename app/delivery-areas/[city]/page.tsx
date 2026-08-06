@@ -98,7 +98,7 @@ const cityDetails: Record<
   taylor: {
     region: 'Williamson County',
     description:
-      'Action Propane delivers propane to Taylor area residential customers. Taylor's rural and semi-rural properties are well-suited to propane as a primary or supplemental energy source.',
+      "Action Propane delivers propane to Taylor area residential customers. Taylor's rural and semi-rural properties are well-suited to propane as a primary or supplemental energy source.",
     services: ['Residential propane delivery'],
   },
   bertram: {
