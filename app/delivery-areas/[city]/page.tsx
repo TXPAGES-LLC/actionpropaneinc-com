@@ -68,7 +68,7 @@ const cityDetails: Record<
   'liberty-hill': {
     region: 'Williamson County',
     description:
-      'Liberty Hill's rural and suburban mix is a natural fit for propane. Action Propane delivers to homes on acreage and in subdivisions throughout the Liberty Hill area and can install new tanks for new construction.',
+      "Liberty Hill's rural and suburban mix is a natural fit for propane. Action Propane delivers to homes on acreage and in subdivisions throughout the Liberty Hill area and can install new tanks for new construction.",
     services: ['Residential propane delivery', 'Propane tank installation'],
   },
   burnet: {
