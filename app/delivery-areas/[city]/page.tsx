@@ -110,7 +110,7 @@ const cityDetails: Record<
   lakeway: {
     region: 'Travis County',
     description:
-      'Lakeway's lakefront homes, gated communities, and resort properties rely on propane for heating, outdoor kitchens, pool heaters, and whole-home backup generators. Action Propane delivers to Lakeway and can install new tanks for homes switching to propane.',
+      "Lakeway's lakefront homes, gated communities, and resort properties rely on propane for heating, outdoor kitchens, pool heaters, and whole-home backup generators. Action Propane delivers to Lakeway and can install new tanks for homes switching to propane.",
     services: ['Residential propane delivery', 'Propane tank installation', 'System service & repair'],
   },
   westlake: {
