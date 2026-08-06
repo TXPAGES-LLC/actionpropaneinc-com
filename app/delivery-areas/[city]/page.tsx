@@ -182,7 +182,7 @@ const cityDetails: Record<
   spicewood: {
     region: 'Burnet County',
     description:
-      'Spicewood's rural properties, wineries, and lakefront homes along Lake Travis and the Colorado River benefit from reliable propane service. Action Propane delivers to Spicewood and can install tanks for new construction and property conversions.',
+      "Spicewood's rural properties, wineries, and lakefront homes along Lake Travis and the Colorado River benefit from reliable propane service. Action Propane delivers to Spicewood and can install tanks for new construction and property conversions.",
     services: ['Residential propane delivery', 'Propane tank installation', 'Agricultural propane service'],
   },
 }
