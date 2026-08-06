@@ -158,7 +158,7 @@ const cityDetails: Record<
   'lago-vista': {
     region: 'Travis County',
     description:
-      'Lago Vista stretches along Lake Travis's north shore and features many homes that are off the natural gas grid. Propane is the preferred fuel for heating, cooking, and water heating in this lakeside community. Action Propane serves Lago Vista with dependable scheduled delivery.',
+      "Lago Vista stretches along Lake Travis's north shore and features many homes that are off the natural gas grid. Propane is the preferred fuel for heating, cooking, and water heating in this lakeside community. Action Propane serves Lago Vista with dependable scheduled delivery.",
     services: ['Residential propane delivery', 'Propane tank installation'],
   },
   briarcliff: {
