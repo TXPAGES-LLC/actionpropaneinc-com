@@ -122,7 +122,7 @@ const cityDetails: Record<
   'barton-creek': {
     region: 'Travis County',
     description:
-      'Barton Creek's hillside estates and resort communities often sit off the natural gas grid, making propane the go-to energy source. Action Propane delivers to Barton Creek area homes and can size and install tanks for new construction or conversions.',
+      "Barton Creek's hillside estates and resort communities often sit off the natural gas grid, making propane the go-to energy source. Action Propane delivers to Barton Creek area homes and can size and install tanks for new construction or conversions.",
     services: ['Residential propane delivery', 'Propane tank installation'],
   },
   'bee-cave': {
