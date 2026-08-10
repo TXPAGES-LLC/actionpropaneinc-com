@@ -131,7 +131,6 @@ export default async function OgImage() {
               backgroundColor: '#dc2626',
               borderRadius: 8,
               padding: '12px 24px',
-              width: 'fit-content',
             }}
           >
             <span style={{ color: 'white', fontSize: 22, fontWeight: 700 }}>
