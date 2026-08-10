@@ -1,10 +1,18 @@
 import { ImageResponse } from 'next/og'
+import { readFile } from 'node:fs/promises'
+import { join } from 'node:path'
 
 export const alt = 'Action Propane Inc — Propane Delivery & Refill in Leander & Austin TX'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function OgImage() {
+  // Read the photo from the local filesystem at build time instead of fetching
+  // the live production URL — the site isn't reachable from within its own
+  // build/prerender step, so a network fetch here fails during `next build`.
+  const imageData = await readFile(join(process.cwd(), 'public', 'front-of-building.jpg'))
+  const imageSrc = `data:image/jpeg;base64,${imageData.toString('base64')}`
+
   return new ImageResponse(
     (
       <div
@@ -21,7 +29,7 @@ export default async function OgImage() {
       >
         {/* Background: storefront photo fills the right ~60% */}
         <img
-          src="https://actionpropaneinc.com/front-of-building.jpg"
+          src={imageSrc}
           alt=""
           width={780}
           height={630}

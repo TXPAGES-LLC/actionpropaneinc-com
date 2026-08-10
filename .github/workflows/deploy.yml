@@ -61,5 +61,5 @@ jobs:
           ACR_USERNAME=$(az acr credential show --name ${{ env.REGISTRY_NAME }} --query username -o tsv)
           ACR_PASSWORD=$(az acr credential show --name ${{ env.REGISTRY_NAME }} --query 'passwords[0].value' -o tsv)
           az containerapp up             --name actionpropaneinc-a720697c             --resource-group Websites             --environment websites-prod             --image ${{ env.LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ github.sha }}             --registry-server ${{ env.LOGIN_SERVER }}             --registry-username $ACR_USERNAME             --registry-password $ACR_PASSWORD             --target-port 3000             --ingress external
-          # up has no scale flags; pin cold-by-default + no scale-out
-          az containerapp update             --name actionpropaneinc-a720697c             --resource-group Websites             --min-replicas 0             --max-replicas 1
+          # up has no scale/size flags; pin cold-by-default, no scale-out, quarter-core sizing
+          az containerapp update             --name actionpropaneinc-a720697c             --resource-group Websites             --min-replicas 0             --max-replicas 1             --cpu 0.25             --memory 0.5Gi
