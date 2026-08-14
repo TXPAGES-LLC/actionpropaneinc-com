@@ -1,5 +1,5 @@
 export const BLOG_DATA_URL =
-  'https://raw.githubusercontent.com/TXPAGES-LLC/actionpropaneinc-com/main/lib/blog/posts.json'
+  'https://generator.dynapt.com/api/blog/data/a720697c-eb61-42d5-abd9-4d0b54dcce1c'
 
 export type BlogSeo = {
   metaTitle?: string
@@ -36,11 +36,16 @@ export type BlogData = {
   posts: BlogPost[]
 }
 
-/** Fetch posts, returning an empty set on any network/parse error or non-OK response. */
-export async function fetchBlogData() {
+/**
+ * Fetch posts, returning an empty set on any network/parse error or non-OK response.
+ * Pass `slug` on the post page only, so per-post traffic can be attributed —
+ * the response shape is identical; the index page fetches the bare URL.
+ */
+export async function fetchBlogData(slug?: string) {
   const empty = { collection: undefined, posts: [] }
+  const url = slug ? `${BLOG_DATA_URL}?slug=${encodeURIComponent(slug)}` : BLOG_DATA_URL
   try {
-    const res = await fetch(BLOG_DATA_URL, { cache: 'no-store' })
+    const res = await fetch(url, { cache: 'no-store' })
     if (!res.ok) return empty
     const data = await res.json()
     return data

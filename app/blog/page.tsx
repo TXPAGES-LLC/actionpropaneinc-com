@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { fetchBlogData, getPublishedPosts } from '@/lib/blog/source'
+import { BLOG_DATA_URL, getPublishedPosts } from '@/lib/blog/source'
 import { BlogPostCard } from '@/components/blog/BlogPostCard'
 import { PHONE, PHONE_HREF } from '@/lib/constants'
 
@@ -20,7 +20,9 @@ export const metadata: Metadata = {
 }
 
 export default async function BlogPage() {
-  const { collection, posts: allPosts } = await fetchBlogData()
+  const res = await fetch(BLOG_DATA_URL, { cache: 'no-store' })
+  const data = res.ok ? await res.json() : { posts: [] }
+  const { collection, posts: allPosts } = data
   const posts = getPublishedPosts(allPosts)
   const basePath = collection?.basePath ?? '/blog'
 

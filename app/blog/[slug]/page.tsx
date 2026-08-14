@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { fetchBlogData, getPublishedPosts, formatDate } from '@/lib/blog/source'
+import { BLOG_DATA_URL, getPublishedPosts, formatDate } from '@/lib/blog/source'
 import { ProseContent } from '@/components/blog/ProseContent'
 import { PHONE, PHONE_HREF, MAPS_HREF, ADDRESS } from '@/lib/constants'
 
@@ -11,8 +11,9 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const { posts } = await fetchBlogData()
-  const published = getPublishedPosts(posts)
+  const res = await fetch(`${BLOG_DATA_URL}?slug=${encodeURIComponent(slug)}`, { cache: 'no-store' })
+  const data = res.ok ? await res.json() : { posts: [] }
+  const published = getPublishedPosts(data.posts)
   const post = published.find((p) => p.slug === slug)
 
   if (!post) {
@@ -43,7 +44,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
-  const { posts, collection } = await fetchBlogData()
+  const res = await fetch(`${BLOG_DATA_URL}?slug=${encodeURIComponent(slug)}`, { cache: 'no-store' })
+  const data = res.ok ? await res.json() : { posts: [] }
+  const { posts, collection } = data
   const published = getPublishedPosts(posts)
   const post = published.find((p) => p.slug === slug)
 

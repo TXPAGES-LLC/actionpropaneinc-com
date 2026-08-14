@@ -92,33 +92,9 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog posts -->
-  <url>
-    <loc>https://actionpropaneinc.com/blog/4-important-questions-to-ask-before-hiring-propane-suppliers-in-austin-tx</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://actionpropaneinc.com/blog/top-5-reasons-to-invest-in-residential-propane-delivery-services</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://actionpropaneinc.com/blog/4-key-factors-to-consider-before-having-a-residential-propane-tank-installation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://actionpropaneinc.com/blog/everything-you-need-to-know-about-propane-services-in-texas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://actionpropaneinc.com/blog/top-5-advantages-of-hiring-emergency-propane-delivery-for-businesses</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <!-- Blog posts are served dynamically from a remote data source and are
+       intentionally omitted here — their slugs are not known at build time
+       for this static sitemap. The /blog index above covers discovery. -->
   <!-- Delivery areas -->
   <url>
     <loc>https://actionpropaneinc.com/delivery-areas</loc>
